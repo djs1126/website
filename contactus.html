@@ -1,40 +1,62 @@
 <!DOCTYPE html>
-<html>
   
+<html>
   <head>
-    <link rel= "stylesheet" href="style.css">
-    <title>My Business</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
-    <a href="#" class="btn">Learn More</a>
-  </body>
-  <nav>
-   <a href="index.html"> Home </a>
-    <a href="pages/page1.html">Menu</a>
-    <a href="contactus.html">Contact Us</a>
-  </nav>
-<body>
-  <div class="column-layout">
-  <div class="main-column">
-    <h2>Location</h2>
-    <p>123 State Street<br>Crete, IL 60417</p>
-    <P><b>Phone:</b> (123)456-7890</P>
-    <p><b>Email:</b> info@otck.com</p>
-  </div>
-  <div class="sidebar-two">
-    <h2>Hours of Operation:</h2>
-    <p>Monday-Saturday: 9am-8pm <br>Closed on Sundays</p>
-  </div>
-  <div class="call-outs-container">
-    <div class="call-out">
-      <h4>Special Offer!</h4>
-      <p>When you come in for your first visit you can get 50% off your order</p>
+
+  <body>
+    
+    <div class="menu-layout">
+      <div class="menu-item"><a href="index.html">Home</a></div>
+      <div class="menu-item">Menu</div>
+      <div class="menu-item">Contact Us</div>
     </div>
 
-    <div class="call-out">
-      <h4>Special Offer!</h4>
-      <p>When you come in on your third visit, you'll recieve a free pie.</p>
-    </div>
 
-  </div>
+    <div class="column-layout">
+      <div class="main-column">
+        <h2>Location</h2>
+        <p>1234 State Street<br>
+        Crete, Illinois 60417</p>
+        <p><b>Phone:</b> (123)-456-7890</p>
+        <p><b>Email:</b> info@otck.com</p>
+      </div>
+
+      <div class="sidebar-two">
+        <h2>Hours of Operation</h2>
+        <p><b>Mon-Sat:</b> 9am - 8pm<br>
+        <b>Sunday:</b> Closed</p>
+      </div>
+      
+
+      
+    </div>
+    
+    
+    
+    <div id="map"></div>
+
+<div id="form1">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSePNk_TcQEscl3qmfwWdFt7rgb1RIB273-TJbEMoYUGVhMFEw/viewform?embedded=true" width="800" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    </div>
+    
+    <script>
+      function initMap() {
+        var uluru = {lat: 41.444481, lng: -87.631432};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0e0W1ICK1sCU8cR--3xgrEIOrQEsDrvU&callback=initMap">
+    </script>
   </body>
-</html>
+
+  </html>
