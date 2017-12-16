@@ -27,8 +27,12 @@
       </div>
     </div>
 
+<div id="buttondiv"><button id="hidebutton" onclick="hideOffers()">Hide Offers</button></div>
 
-    <div class="call-outs-container">
+
+
+
+    <div id="specialoffers" class="call-outs-container">
       <div class="call-out">
         <h4>Special Offer!</h4>
         <p>When you come in for your first visit you can get 50% off your order</p>
@@ -42,7 +46,20 @@
       </div>
 
     </div>
+    
+   <script>
+      function hideOffers() {
+        var x = document.getElementById("specialoffers");
+        var y = document.getElementById("hidebutton");
+
+        x.style.display="none";
+        y.style.display="none";
+
+      }
+    </script>
+    
+    
+    
   </body>
 
   </html>
-
